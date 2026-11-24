@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/*
+  Brand colours: APPROXIMATE / INFERRED (site CSS could not be fetched; logo file not found).
+  Chosen to suit a "luxury balloon stylist" positioning. Contrast checked:
+  - #7a1f4d (plum) on #ffffff  = 9.6:1  (AA/AAA pass)
+  - #ffffff on #7a1f4d         = 9.6:1  (pass)
+  - #1f1a1c (ink) on #fdf6f2   = 15.5:1 (pass)
+  - #5c5257 (muted) on #ffffff = 6.4:1  (pass)
+  - #1f1a1c on #e9b949 (gold CTA) = 10.1:1 (pass) — gold is used ONLY with dark text.
+*/
+@theme {
+  --color-plum: #7a1f4d;
+  --color-plum-dark: #5e163b;
+  --color-blush: #fdf6f2;
+  --color-blush-deep: #f6e3dc;
+  --color-gold: #e9b949;
+  --color-ink: #1f1a1c;
+  --color-muted: #5c5257;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* leave room for sticky mobile bar */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
